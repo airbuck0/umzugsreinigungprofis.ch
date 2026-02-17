@@ -1,0 +1,76 @@
+---
+const benefits = [
+  {
+    title: "100% Abnahmegarantie",
+    description: "Wird Ihre Wohnung bei der Übergabe nicht abgenommen, kommen wir kostenlos zurück und reinigen nach. Ihre Mietkaution ist sicher.",
+    icon: "shield",
+  },
+  {
+    title: "Faire Festpreise",
+    description: "Keine bösen Überraschungen. Unsere Preise sind transparent und beinhalten alles: Material, Anfahrt und MwSt.",
+    icon: "price",
+  },
+  {
+    title: "Erfahrene Profis",
+    description: "Unser Team besteht aus geschulten Reinigungsfachkräften mit langjähriger Erfahrung in der professionellen Endreinigung.",
+    icon: "team",
+  },
+  {
+    title: "Flexibel & Kurzfristig",
+    description: "Auch kurzfristige Termine sind möglich – selbst am Wochenende. Wir passen uns Ihrem Umzugsplan an.",
+    icon: "calendar",
+  },
+  {
+    title: "Schweizweit verfügbar",
+    description: "Wir sind in allen grossen Schweizer Städten für Sie im Einsatz – von Zürich über Bern bis Basel und Genf.",
+    icon: "map",
+  },
+  {
+    title: "Umweltfreundlich",
+    description: "Wir verwenden professionelle, umweltschonende Reinigungsmittel, die effektiv und gleichzeitig nachhaltig sind.",
+    icon: "leaf",
+  },
+];
+---
+
+<section class="py-16 lg:py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl lg:text-3xl font-bold text-dark mb-4">
+        Warum <span class="text-primary-600">Umzugsreinigung Profis</span>?
+      </h2>
+      <p class="text-slate-600 max-w-2xl mx-auto">
+        Wir machen Ihre Umzugsreinigung stressfrei. Hier sind die Gründe, warum über 1'000 Kunden uns vertrauen.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {benefits.map(benefit => (
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-4">
+            {benefit.icon === "shield" && (
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            )}
+            {benefit.icon === "price" && (
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            )}
+            {benefit.icon === "team" && (
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            )}
+            {benefit.icon === "calendar" && (
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            )}
+            {benefit.icon === "map" && (
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            )}
+            {benefit.icon === "leaf" && (
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+            )}
+          </div>
+          <h3 class="text-lg font-bold text-dark mb-2">{benefit.title}</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">{benefit.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

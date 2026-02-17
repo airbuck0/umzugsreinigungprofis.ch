@@ -1,0 +1,73 @@
+---
+const faqs = [
+  {
+    question: "Was kostet eine Umzugsreinigung?",
+    answer: "Die Kosten einer Umzugsreinigung hängen von der Grösse und dem Zustand der Wohnung ab. Für eine 3.5-Zimmer-Wohnung beginnen unsere Preise ab CHF 599. Alle Preise verstehen sich inklusive Material, Anfahrt und MwSt. (8.1%). Fordern Sie jetzt eine kostenlose Offerte an für einen genauen Preis.",
+  },
+  {
+    question: "Was ist der Unterschied zwischen Umzugsreinigung und Endreinigung?",
+    answer: "Die Begriffe Umzugsreinigung und Endreinigung (auch Wohnungsabgabereinigung genannt) bedeuten dasselbe. Es handelt sich um die professionelle Reinigung einer Mietwohnung, die bei der Rückgabe an den Vermieter oder die Verwaltung durchgeführt wird. In der Schweiz wird häufig auch der Begriff «Wohnungsübergabe-Reinigung» verwendet.",
+  },
+  {
+    question: "Was beinhaltet die Abnahmegarantie?",
+    answer: "Unsere 100% Abnahmegarantie bedeutet: Wenn Ihre Wohnung bei der offiziellen Wohnungsübergabe nicht als sauber akzeptiert wird, kommen wir kostenlos zurück und beheben die beanstandeten Punkte. So ist Ihre Mietkaution sicher.",
+  },
+  {
+    question: "Wie lange dauert eine Umzugsreinigung?",
+    answer: "Die Dauer hängt von der Wohnungsgrösse ab. Eine 2.5-Zimmer-Wohnung dauert in der Regel 4-5 Stunden, eine 4.5-Zimmer-Wohnung ca. 6-8 Stunden. Wir kommen mit einem mehrköpfigen Team, damit alles effizient und gründlich erledigt wird.",
+  },
+  {
+    question: "Muss die Wohnung leer sein für die Endreinigung?",
+    answer: "Ja, idealerweise sollte die Wohnung komplett leer und geräumt sein, bevor wir mit der Umzugsreinigung beginnen. So können wir alle Oberflächen, Böden und Einbauten gründlich reinigen. Sollte das nicht möglich sein, kontaktieren Sie uns – wir finden eine Lösung.",
+  },
+  {
+    question: "Wie kurzfristig kann ich einen Termin buchen?",
+    answer: "Wir sind flexibel und bieten auch kurzfristige Termine an. In der Regel können wir innerhalb von 2-3 Tagen einen Termin einrichten, je nach Verfügbarkeit auch schneller. Wochenendtermine sind ebenfalls möglich.",
+  },
+  {
+    question: "Bringe ich selber Reinigungsmaterial mit?",
+    answer: "Nein, Sie müssen kein Material bereitstellen. Unsere Teams bringen sämtliches professionelles Reinigungsmaterial und -equipment selber mit. Das ist im Preis inbegriffen.",
+  },
+  {
+    question: "In welchen Städten bieten Sie Umzugsreinigung an?",
+    answer: "Wir bieten unsere professionelle Umzugsreinigung und Endreinigung schweizweit an – unter anderem in Zürich, Bern, Basel, Genf, Lausanne, Winterthur, Luzern, St. Gallen, Lugano und Biel. Kontaktieren Sie uns für eine Offerte in Ihrer Stadt.",
+  },
+  {
+    question: "Kann ich die Umzugsreinigung von der Steuer absetzen?",
+    answer: "In der Schweiz können Reinigungskosten im Zusammenhang mit einem Umzug unter bestimmten Umständen steuerlich geltend gemacht werden. Wir empfehlen Ihnen, sich bei Ihrem Steuerberater zu erkundigen. Wir stellen Ihnen selbstverständlich eine ordentliche Rechnung aus.",
+  },
+  {
+    question: "Was passiert, wenn die Verwaltung Mängel bei der Abnahme findet?",
+    answer: "Dank unserer 100% Abnahmegarantie kommen wir kostenlos zurück und beheben alle beanstandeten Punkte. Das ist unser Versprechen an Sie. In über 95% der Fälle wird die Wohnung beim ersten Mal problemlos abgenommen.",
+  },
+];
+---
+
+<section id="faq" class="py-16 lg:py-20 bg-slate-50">
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl lg:text-3xl font-bold text-dark mb-4">
+        Häufig gestellte Fragen zur <span class="text-primary-600">Umzugsreinigung</span>
+      </h2>
+      <p class="text-slate-600">
+        Hier finden Sie Antworten auf die häufigsten Fragen rund um unsere Endreinigung.
+      </p>
+    </div>
+
+    <div class="space-y-3">
+      {faqs.map((faq, i) => (
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+          <button data-faq-toggle class="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 transition-colors">
+            <span class="text-sm lg:text-base font-semibold text-dark pr-4">{faq.question}</span>
+            <svg data-faq-icon class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class={`px-5 pb-5 ${i === 0 ? '' : 'hidden'}`}>
+            <p class="text-sm text-slate-600 leading-relaxed">{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

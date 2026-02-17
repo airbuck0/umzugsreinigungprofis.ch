@@ -1,0 +1,49 @@
+---
+const services = [
+  "Küche komplett (inkl. Backofen, Kühlschrank, Abzugshaube, Schränke innen/aussen)",
+  "Badezimmer & WC (Dusche/Badewanne, Lavabo, Spiegel, Armaturen, Plättli)",
+  "Alle Zimmer (Böden, Fenster, Storen, Heizkörper, Steckdosen, Lichtschalter)",
+  "Einbauschränke & Abstellräume (innen und aussen gereinigt)",
+  "Fenster & Fensterrahmen (inkl. Fenstersims innen und aussen)",
+  "Balkon / Terrasse (Böden, Geländer)",
+  "Treppen & Korridor",
+  "Waschküche & Keller (anteilig)",
+  "Storen & Rollläden",
+  "Sockelleisten & Türrahmen",
+  "Sämtliche Böden (wischen, saugen, je nach Belag)",
+  "Spinnweben entfernen",
+];
+---
+
+<section id="leistungen" class="py-16 lg:py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl lg:text-3xl font-bold text-dark mb-4">
+        Was ist in unserer Umzugsreinigung inbegriffen?
+      </h2>
+      <p class="text-slate-600 max-w-2xl mx-auto">
+        Unsere Endreinigung umfasst die komplette Reinigung Ihrer Wohnung nach Schweizer Standard – damit die Abnahme beim ersten Mal klappt.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      {services.map(service => (
+        <div class="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm">
+          <div class="w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <span class="text-sm text-slate-700">{service}</span>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-8">
+      <a href="#kontakt" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+        Jetzt Offerte anfordern
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>

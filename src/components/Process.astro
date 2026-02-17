@@ -1,0 +1,53 @@
+---
+const steps = [
+  {
+    number: "1",
+    title: "Anfrage stellen",
+    description: "Füllen Sie unser Kontaktformular aus oder rufen Sie uns direkt an. Teilen Sie uns die Grösse Ihrer Wohnung und den gewünschten Termin mit.",
+  },
+  {
+    number: "2",
+    title: "Offerte erhalten",
+    description: "Innerhalb von 24 Stunden erhalten Sie von uns eine kostenlose und unverbindliche Offerte mit Festpreis für Ihre Umzugsreinigung.",
+  },
+  {
+    number: "3",
+    title: "Reinigung durchführen",
+    description: "Am vereinbarten Termin kommt unser Reinigungsteam und führt die professionelle Endreinigung nach bewährtem System durch.",
+  },
+  {
+    number: "4",
+    title: "Abnahme bestehen",
+    description: "Ihre Wohnung wird von der Verwaltung abgenommen. Sollte es Beanstandungen geben, reinigen wir kostenlos nach – garantiert.",
+  },
+];
+---
+
+<section id="ablauf" class="py-16 lg:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl lg:text-3xl font-bold text-dark mb-4">
+        So einfach funktioniert Ihre <span class="text-primary-600">Umzugsreinigung</span>
+      </h2>
+      <p class="text-slate-600 max-w-2xl mx-auto">
+        In nur 4 Schritten zur sauberen Wohnung – stressfrei und mit Abnahmegarantie.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+      {steps.map((step, i) => (
+        <div class="relative text-center">
+          {/* Connector line */}
+          {i < steps.length - 1 && (
+            <div class="hidden lg:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-primary-200"></div>
+          )}
+          <div class="relative z-10 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-200">
+            <span class="text-2xl font-bold text-white">{step.number}</span>
+          </div>
+          <h3 class="text-lg font-bold text-dark mb-2">{step.title}</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
