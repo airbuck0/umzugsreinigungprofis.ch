@@ -68,39 +68,13 @@ const { title, description } = Astro.props;
         });
       });
 
-      // Form submission via mailto (static-site friendly)
-      document.querySelectorAll('form[data-mailto-form]').forEach(form => {
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const data = new FormData(form);
-          const labels = {
-            name: 'Name', phone: 'Telefon', email: 'E-Mail',
-            rooms: 'Anzahl Zimmer', city: 'Stadt', message: 'Nachricht'
-          };
-          const lines = [];
-          for (const [key, val] of data.entries()) {
-            if (!val) continue;
-            lines.push(`${labels[key] || key}: ${val}`);
-          }
-          const subject = encodeURIComponent('Offerte-Anfrage Umzugsreinigung');
-          const body = encodeURIComponent(lines.join('\n') + '\n\n— Gesendet über umzugsreinigungprofis.ch');
-          const mailto = `mailto:kontakt@umzugsreinigungprofis.ch?subject=${subject}&body=${body}`;
-          window.location.href = mailto;
-
-          const btn = form.querySelector('button[type="submit"]');
-          if (btn) {
-            const original = btn.textContent;
-            btn.textContent = '✓ Mailprogramm geöffnet — bitte senden';
-            btn.disabled = true;
-            btn.classList.add('!bg-emerald-600');
-            setTimeout(() => {
-              btn.textContent = original;
-              btn.disabled = false;
-              btn.classList.remove('!bg-emerald-600');
-            }, 6000);
-          }
+      // Show success message after Web3Forms redirect
+      if (window.location.search.indexOf('success=true') !== -1) {
+        const successHtml = '<div class="text-center py-10"><div class="w-16 h-16 mx-auto mb-4 rounded-full bg-emerald-100 flex items-center justify-center"><svg class="w-9 h-9 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div><h3 class="text-xl font-bold text-dark mb-2">Vielen Dank!</h3><p class="text-slate-600 mb-5">Ihre Anfrage wurde gesendet. Wir melden uns innert 24 Stunden bei Ihnen.</p><a href="tel:+41444990503" class="inline-flex items-center gap-2 bg-accent hover:bg-emerald-600 text-white font-bold px-5 py-3 rounded-lg transition-colors">Jetzt anrufen: +41 44 499 05 03</a></div>';
+        document.querySelectorAll('#contactForm, #contactFormCTA').forEach(form => {
+          form.innerHTML = successHtml;
         });
-      });
+      }
 
       // Mobile menu toggle
       const menuBtn = document.getElementById('mobile-menu-btn');
