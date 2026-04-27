@@ -25,6 +25,24 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Umzugsreinigungprofis",
+      "image": "https://umzugsreinigungprofis.ch/Logo.png",
+      "url": "https://umzugsreinigungprofis.ch/",
+      "telephone": "+41444990503",
+      "email": "kontakt@umzugsreinigungprofis.ch",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dufourstrasse 48",
+        "postalCode": "8008",
+        "addressLocality": "Zürich",
+        "addressCountry": "CH"
+      },
+      "openingHours": "Mo-Sa 07:00-20:00",
+      "areaServed": "CH"
+    })} />
   </head>
   <body class="font-sans text-slate-800 antialiased">
     <slot />
