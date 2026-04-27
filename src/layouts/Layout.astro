@@ -68,6 +68,40 @@ const { title, description } = Astro.props;
         });
       });
 
+      // Form submission via mailto (static-site friendly)
+      document.querySelectorAll('form[data-mailto-form]').forEach(form => {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const data = new FormData(form);
+          const labels = {
+            name: 'Name', phone: 'Telefon', email: 'E-Mail',
+            rooms: 'Anzahl Zimmer', city: 'Stadt', message: 'Nachricht'
+          };
+          const lines = [];
+          for (const [key, val] of data.entries()) {
+            if (!val) continue;
+            lines.push(`${labels[key] || key}: ${val}`);
+          }
+          const subject = encodeURIComponent('Offerte-Anfrage Umzugsreinigung');
+          const body = encodeURIComponent(lines.join('\n') + '\n\n— Gesendet über umzugsreinigungprofis.ch');
+          const mailto = `mailto:kontakt@umzugsreinigungprofis.ch?subject=${subject}&body=${body}`;
+          window.location.href = mailto;
+
+          const btn = form.querySelector('button[type="submit"]');
+          if (btn) {
+            const original = btn.textContent;
+            btn.textContent = '✓ Mailprogramm geöffnet — bitte senden';
+            btn.disabled = true;
+            btn.classList.add('!bg-emerald-600');
+            setTimeout(() => {
+              btn.textContent = original;
+              btn.disabled = false;
+              btn.classList.remove('!bg-emerald-600');
+            }, 6000);
+          }
+        });
+      });
+
       // Mobile menu toggle
       const menuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
