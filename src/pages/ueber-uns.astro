@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileBar from '../components/MobileBar.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<Layout
+  title="Über uns | Umzugsreinigungprofis – Reinigungsfirma in der Deutschschweiz"
+  description="Umzugsreinigungprofis ist eine Deutschschweizer Umzugsreinigungsfirma mit Hauptsitz in Zürich. Über 20 Jahre Erfahrung, 1000+ zufriedene Kunden und 100% Abnahmegarantie."
+>
+  <Header />
+  <main>
+    <section class="bg-dark text-white py-16 lg:py-20">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4">Über Umzugsreinigungprofis</h1>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+          Ihre Deutschschweizer Umzugsreinigungsfirma mit Hauptsitz in Zürich – spezialisiert auf professionelle Umzugsreinigung mit Abnahmegarantie.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 lg:py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+
+        <div class="prose max-w-none">
+          <h2 class="text-2xl lg:text-3xl font-bold text-dark mb-4">Wer wir sind</h2>
+          <p class="text-slate-700 leading-relaxed mb-4">
+            <strong>Umzugsreinigungprofis</strong> ist eine Deutschschweizer Umzugsreinigungsfirma mit Hauptsitz an der Dufourstrasse 48 in 8008 Zürich. Wir sind ausschliesslich auf Umzugsreinigungen und Endreinigungen spezialisiert – das ist unser Handwerk und unsere Leidenschaft.
+          </p>
+          <p class="text-slate-700 leading-relaxed mb-8">
+            Seit über 20 Jahren begleiten wir Mieterinnen und Mieter in der ganzen Deutschschweiz beim Auszug aus ihrer Wohnung. Über 1'000 zufriedene Kunden und eine 5-Sterne-Bewertung sprechen für unsere Arbeit.
+          </p>
+
+          <h2 class="text-2xl lg:text-3xl font-bold text-dark mb-4">Unsere Mission</h2>
+          <p class="text-slate-700 leading-relaxed mb-8">
+            Wir machen Wohnungsabgaben stressfrei. Statt sich am Umzugstag mit Fettflecken im Backofen, Kalkablagerungen im Bad und verschmutzten Fensterfalzen herumzuschlagen, übernehmen wir die komplette Reinigung. Mit 100% Abnahmegarantie – falls die Verwaltung etwas beanstandet, kommen wir kostenlos zurück.
+          </p>
+
+          <h2 class="text-2xl lg:text-3xl font-bold text-dark mb-4">Was uns auszeichnet</h2>
+          <ul class="space-y-3 text-slate-700 mb-8">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              <span><strong>Spezialisierung:</strong> Wir machen ausschliesslich Umzugsreinigungen – keine Bürolesreinigung, keine Putzdienste. Nur das, was wir am besten können.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              <span><strong>Abnahmegarantie:</strong> Falls Ihre Wohnung bei der Übergabe nicht abgenommen wird, kommen wir kostenlos zurück und reinigen nach.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              <span><strong>Faire Festpreise:</strong> Klare Pauschalpreise inklusive Material, Anfahrt und MwSt. – ohne versteckte Kosten.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              <span><strong>Erfahrung mit Schweizer Verwaltungen:</strong> Wir kennen die Abnahmekriterien der grössten Hausverwaltungen in der Deutschschweiz.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              <span><strong>Schweizweiter Service in der Deutschschweiz:</strong> Eingespielte Teams in Zürich, Bern, Basel, Luzern, Winterthur, St. Gallen, Zug und Umgebung.</span>
+            </li>
+          </ul>
+
+          <h2 class="text-2xl lg:text-3xl font-bold text-dark mb-4">Unsere Zahlen</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div class="bg-slate-50 rounded-xl p-6 text-center">
+              <div class="text-3xl font-bold text-primary-600 mb-1">20+</div>
+              <div class="text-sm text-slate-600">Jahre Erfahrung</div>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-6 text-center">
+              <div class="text-3xl font-bold text-primary-600 mb-1">1'000+</div>
+              <div class="text-sm text-slate-600">Zufriedene Kunden</div>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-6 text-center">
+              <div class="text-3xl font-bold text-primary-600 mb-1">5★</div>
+              <div class="text-sm text-slate-600">Bewertung</div>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-6 text-center">
+              <div class="text-3xl font-bold text-primary-600 mb-1">100%</div>
+              <div class="text-sm text-slate-600">Abnahmegarantie</div>
+            </div>
+          </div>
+
+          <h2 class="text-2xl lg:text-3xl font-bold text-dark mb-4">Standort</h2>
+          <p class="text-slate-700 leading-relaxed mb-8">
+            Unser Hauptsitz befindet sich an der <strong>Dufourstrasse 48 in 8008 Zürich</strong>. Von hier aus koordinieren wir alle Einsätze in der Deutschschweiz. Sie erreichen uns unter <a href="tel:+41444990503" class="text-primary-600 hover:underline">+41 44 499 05 03</a> oder per E-Mail an <a href="mailto:kontakt@umzugsreinigungprofis.ch" class="text-primary-600 hover:underline">kontakt@umzugsreinigungprofis.ch</a>.
+          </p>
+        </div>
+
+        <div class="bg-primary-600 rounded-2xl p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-3">Bereit für eine stressfreie Wohnungsabgabe?</h2>
+          <p class="mb-6 text-primary-100">Fordern Sie jetzt Ihre kostenlose Offerte an.</p>
+          <a href="/kontakt" class="inline-block bg-white text-primary-700 font-bold px-6 py-3 rounded-lg hover:bg-slate-100 transition-colors">Gratis Offerte anfordern</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <MobileBar />
+  <WhatsAppButton />
+</Layout>

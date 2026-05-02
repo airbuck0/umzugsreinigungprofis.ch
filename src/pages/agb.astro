@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileBar from '../components/MobileBar.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<Layout
+  title="AGB | Allgemeine Geschäftsbedingungen – Umzugsreinigungprofis"
+  description="Allgemeine Geschäftsbedingungen von Umzugsreinigungprofis – Bedingungen für die Inanspruchnahme unserer Reinigungsdienstleistungen."
+  noIndex={true}
+>
+  <Header />
+  <main>
+    <section class="bg-dark text-white py-16">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-3">Allgemeine Geschäftsbedingungen</h1>
+        <p class="text-slate-300">Stand: Mai 2026</p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+
+        <h2 class="text-2xl font-bold text-dark mt-0 mb-4">1. Geltungsbereich</h2>
+        <p class="text-slate-700 leading-relaxed mb-6">
+          Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für sämtliche Verträge zwischen <strong>Umzugsreinigungprofis</strong> (nachfolgend «Auftragnehmerin») und ihren Kundinnen und Kunden (nachfolgend «Auftraggeber») über die Erbringung von Reinigungsdienstleistungen, insbesondere Umzugsreinigungen und Endreinigungen.
+        </p>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">2. Vertragsabschluss</h2>
+        <p class="text-slate-700 leading-relaxed mb-6">
+          Unsere Offerten sind unverbindlich. Ein Vertrag kommt erst durch schriftliche oder mündliche Auftragsbestätigung der Auftraggeberin/des Auftraggebers zustande. Mit der Auftragserteilung anerkennt der Auftraggeber diese AGB.
+        </p>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">3. Leistungsumfang</h2>
+        <p class="text-slate-700 leading-relaxed mb-3">
+          Der Leistungsumfang richtet sich nach der jeweiligen Offerte bzw. Auftragsbestätigung. Sofern nichts anderes vereinbart ist, beinhaltet eine Umzugsreinigung:
+        </p>
+        <ul class="list-disc pl-6 space-y-1 text-slate-700 mb-6">
+          <li>Reinigung sämtlicher Räume (Küche, Bad/WC, Wohnräume, Nebenräume)</li>
+          <li>Fensterreinigung innen und aussen inklusive Rahmen und Falze</li>
+          <li>Reinigung von Storen, Heizkörpern, Sockelleisten und Türen</li>
+          <li>Anfahrt, Reinigungsmaterial und Mehrwertsteuer</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">4. Preise und Zahlungsbedingungen</h2>
+        <p class="text-slate-700 leading-relaxed mb-6">
+          Sämtliche Preise verstehen sich in Schweizer Franken (CHF) inklusive Mehrwertsteuer. Die Bezahlung erfolgt nach Auftragsabschluss innert 14 Tagen nach Rechnungsstellung, sofern nichts anderes vereinbart wurde. Bei Zahlungsverzug werden Verzugszinsen von 5% sowie Mahngebühren erhoben.
+        </p>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">5. Abnahmegarantie</h2>
+        <p class="text-slate-700 leading-relaxed mb-6">
+          Die Auftragnehmerin gewährt eine 100% Abnahmegarantie. Wird die gereinigte Wohnung bei der offiziellen Wohnungsübergabe durch die Verwaltung oder den Vermieter nicht abgenommen, behebt die Auftragnehmerin die beanstandeten Mängel kostenlos. Voraussetzung ist, dass die Beanstandung innert 24 Stunden nach Wohnungsübergabe gemeldet wird und die Mängel klar dokumentiert sind. Die Garantie gilt nicht für Beanstandungen, die nicht in den vereinbarten Leistungsumfang fallen.
+        </p>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">6. Pflichten des Auftraggebers</h2>
+        <p class="text-slate-700 leading-relaxed mb-3">Der Auftraggeber verpflichtet sich:</p>
+        <ul class="list-disc pl-6 space-y-1 text-slate-700 mb-6">
+          <li>Die Wohnung vor Reinigungsbeginn vollständig zu räumen</li>
+          <li>Strom und Wasser bereitzustellen</li>
+          <li>Den Zugang zur Wohnung sicherzustellen (Schlüsselübergabe)</li>
+          <li>Auf besondere Verschmutzungen oder Materialien hinzuweisen</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">7. Stornierung und Terminverschiebung</h2>
+        <p class="text-slate-700 leading-relaxed mb-6">
+          Stornierungen oder Terminverschiebungen sind bis 48 Stunden vor dem vereinbarten Termin kostenlos möglich. Bei späterer Stornierung behalten wir uns vor, eine Aufwandsentschädigung von 50% des Auftragswertes in Rechnung zu stellen. Bei Nichterscheinen ohne Absage wird der volle Auftragspreis fällig.
+        </p>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">8. Haftung</h2>
+        <p class="text-slate-700 leading-relaxed mb-6">
+          Die Auftragnehmerin haftet im Rahmen der gesetzlichen Bestimmungen für Schäden, die nachweislich durch ihre Reinigungstätigkeit entstehen. Schäden müssen innert 24 Stunden nach der Reinigung schriftlich gemeldet werden. Die Auftragnehmerin verfügt über eine Betriebshaftpflichtversicherung. Eine Haftung für vorhandene Mängel an Mobiliar, Einrichtungen oder Bausubstanz ist ausgeschlossen.
+        </p>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">9. Datenschutz</h2>
+        <p class="text-slate-700 leading-relaxed mb-6">
+          Die Bearbeitung von Personendaten erfolgt gemäss unserer <a href="/datenschutz" class="text-primary-600 hover:underline">Datenschutzerklärung</a>.
+        </p>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">10. Anwendbares Recht und Gerichtsstand</h2>
+        <p class="text-slate-700 leading-relaxed mb-6">
+          Es gilt ausschliesslich Schweizer Recht. Gerichtsstand ist Zürich, Schweiz.
+        </p>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">11. Salvatorische Klausel</h2>
+        <p class="text-slate-700 leading-relaxed mb-6">
+          Sollten einzelne Bestimmungen dieser AGB ungültig oder nicht durchsetzbar sein, bleibt die Wirksamkeit der übrigen Bestimmungen davon unberührt.
+        </p>
+
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <MobileBar />
+  <WhatsAppButton />
+</Layout>

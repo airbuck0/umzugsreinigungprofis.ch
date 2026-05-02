@@ -2,9 +2,10 @@
 interface Props {
   title: string;
   description: string;
+  noIndex?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, noIndex = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,9 +13,9 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
     <meta name="description" content={description} />
-    <meta name="keywords" content="Umzugsreinigung, Endreinigung, Umzugsreinigung Schweiz, Endreinigung Schweiz, Wohnungsreinigung, Abnahmegarantie, Umzugsreinigung Profis" />
+    <meta name="keywords" content="Umzugsreinigung, Endreinigung, Umzugsreinigung Deutschschweiz, Endreinigung Deutschschweiz, Wohnungsreinigung, Abnahmegarantie, Umzugsreinigung Profis" />
     <link rel="canonical" href="https://umzugsreinigungprofis.ch/" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -29,7 +30,7 @@ const { title, description } = Astro.props;
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Umzugsreinigungprofis",
-      "image": "https://umzugsreinigungprofis.ch/Logo.png",
+      "image": "https://umzugsreinigungprofis.ch/logo.png",
       "url": "https://umzugsreinigungprofis.ch/",
       "telephone": "+41444990503",
       "email": "kontakt@umzugsreinigungprofis.ch",

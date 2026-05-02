@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileBar from '../components/MobileBar.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<Layout
+  title="Impressum | Umzugsreinigungprofis"
+  description="Impressum von Umzugsreinigungprofis – Angaben gemäss Schweizer Bundesgesetz gegen den unlauteren Wettbewerb (UWG)."
+  noIndex={true}
+>
+  <Header />
+  <main>
+    <section class="bg-dark text-white py-16">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-3">Impressum</h1>
+        <p class="text-slate-300">Angaben gemäss Schweizer UWG</p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+
+        <h2 class="text-2xl font-bold text-dark mb-4">Anbieter</h2>
+        <address class="not-italic bg-slate-50 rounded-lg p-6 mb-8 text-slate-700">
+          <strong class="text-lg">Umzugsreinigungprofis</strong><br /><br />
+          Dufourstrasse 48<br />
+          8008 Zürich<br />
+          Schweiz
+        </address>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">Kontakt</h2>
+        <div class="bg-slate-50 rounded-lg p-6 mb-8 text-slate-700 space-y-2">
+          <p>
+            <strong>Telefon:</strong> <a href="tel:+41444990503" class="text-primary-600 hover:underline">+41 44 499 05 03</a>
+          </p>
+          <p>
+            <strong>E-Mail:</strong> <a href="mailto:kontakt@umzugsreinigungprofis.ch" class="text-primary-600 hover:underline">kontakt@umzugsreinigungprofis.ch</a>
+          </p>
+          <p>
+            <strong>Web:</strong> <a href="https://umzugsreinigungprofis.ch" class="text-primary-600 hover:underline">umzugsreinigungprofis.ch</a>
+          </p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">Öffnungszeiten</h2>
+        <p class="text-slate-700 leading-relaxed mb-8">
+          Montag bis Samstag: 07:00 – 20:00 Uhr<br />
+          Sonntag: geschlossen
+        </p>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">Haftungsausschluss</h2>
+        <p class="text-slate-700 leading-relaxed mb-4">
+          Der Autor übernimmt keine Gewähr für die Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen auf dieser Website.
+        </p>
+        <p class="text-slate-700 leading-relaxed mb-8">
+          Haftungsansprüche gegen den Autor wegen Schäden materieller oder immaterieller Art, welche aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen, durch Missbrauch der Verbindung oder durch technische Störungen entstanden sind, werden ausgeschlossen.
+        </p>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">Haftung für Links</h2>
+        <p class="text-slate-700 leading-relaxed mb-8">
+          Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Es wird jegliche Verantwortung für solche Webseiten abgelehnt. Der Zugriff und die Nutzung solcher Webseiten erfolgen auf eigene Gefahr des jeweiligen Nutzers.
+        </p>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">Urheberrechte</h2>
+        <p class="text-slate-700 leading-relaxed mb-8">
+          Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser Website gehören ausschliesslich Umzugsreinigungprofis oder den speziell genannten Rechtsinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung der Urheberrechtsträger im Voraus einzuholen.
+        </p>
+
+        <h2 class="text-2xl font-bold text-dark mb-4">Datenschutz</h2>
+        <p class="text-slate-700 leading-relaxed">
+          Informationen zum Datenschutz finden Sie in unserer <a href="/datenschutz" class="text-primary-600 hover:underline">Datenschutzerklärung</a>.
+        </p>
+
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <MobileBar />
+  <WhatsAppButton />
+</Layout>
