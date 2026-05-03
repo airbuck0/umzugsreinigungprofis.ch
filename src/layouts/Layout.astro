@@ -11,11 +11,20 @@ const { title, description, noIndex = false } = Astro.props;
 <!doctype html>
 <html lang="de">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8TLB6KFDG"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S8TLB6KFDG');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
     <meta name="description" content={description} />
-    <meta name="keywords" content="Umzugsreinigung, Endreinigung, Umzugsreinigung Deutschschweiz, Endreinigung Deutschschweiz, Wohnungsreinigung, Abnahmegarantie, Umzugsreinigung Profis" />
+    <meta name="keywords" content="Umzugsreinigungprofis, Umzugsreinigung, Endreinigung, Umzugsreinigung Deutschschweiz, Endreinigung Deutschschweiz, Wohnungsreinigung, Abnahmegarantie" />
     <link rel="canonical" href="https://umzugsreinigungprofis.ch/" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
